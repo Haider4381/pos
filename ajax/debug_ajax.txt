@@ -1,0 +1,5 @@
+Array
+(
+    [lot_no] => 500
+    [unit_id] => 33
+)
