@@ -1,0 +1,1432 @@
+POST item_Name: Array
+(
+    [0] => Lux Soap
+    [1] => Blue Suit Case Made in Garmany Medium
+)
+
+POST item_id: Array
+(
+    [0] => 11
+    [1] => 3
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+    [1] => 1
+)
+
+Starting sale_add.php
+Product name: Lux Soap
+Product name: Blue Suit Case Made in Garmany Medium
+POST item_Name: Array
+(
+    [0] => Blue Ladies Bag
+    [1] => 
+)
+
+POST item_id: Array
+(
+    [0] => 5
+    [1] => 
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+    [1] => 1
+)
+
+Starting sale_add.php
+Product name: Blue Ladies Bag
+POST item_Name: Array
+(
+    [0] => Blue Ladies Bag
+    [1] => 
+)
+
+POST item_id: Array
+(
+    [0] => 5
+    [1] => 
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+    [1] => 1
+)
+
+Starting sale_add.php
+Product name: Blue Ladies Bag
+POST item_Name: Array
+(
+    [0] => Blue Ladies Bag
+)
+
+POST item_id: Array
+(
+    [0] => 5
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+)
+
+Starting sale_add.php
+Product name: Blue Ladies Bag
+POST item_Name: Array
+(
+    [0] => Lux Soap
+    [1] => Blue Suit Case Made in Garmany Medium
+)
+
+POST item_id: Array
+(
+    [0] => 11
+    [1] => 3
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+    [1] => 1
+)
+
+Starting sale_add.php
+Product name: Lux Soap
+Product name: Blue Suit Case Made in Garmany Medium
+POST item_Name: Array
+(
+    [0] => Lux Soap
+    [1] => Blue Suit Case Made in Garmany Medium
+)
+
+POST item_id: Array
+(
+    [0] => 11
+    [1] => 3
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+    [1] => 1
+)
+
+Starting sale_add.php
+Product name: Lux Soap
+Product name: Blue Suit Case Made in Garmany Medium
+POST item_Name: Array
+(
+    [0] => Blue Ladies Bag
+    [1] => Lux Soap
+    [2] => fdsf
+)
+
+POST item_id: Array
+(
+    [0] => 5
+    [1] => 11
+    [2] => 10
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+    [1] => 1
+    [2] => 1
+)
+
+Starting sale_add.php
+Product name: Blue Ladies Bag
+Product name: Lux Soap
+Product name: fdsf
+POST item_Name: Array
+(
+    [0] => Lawn 943893
+)
+
+POST item_id: Array
+(
+    [0] => 15
+)
+
+POST item_Qty: Array
+(
+    [0] => 100
+)
+
+Starting sale_add.php
+Product name: Lawn 943893
+POST item_Name: Array
+(
+    [0] => Lux Soap
+)
+
+POST item_id: Array
+(
+    [0] => 11
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+)
+
+Starting sale_add.php
+Product name: Lux Soap
+POST item_Name: Array
+(
+    [0] => Lux Soap
+    [1] => Blue Suit Case Made in Garmany Medium
+)
+
+POST item_id: Array
+(
+    [0] => 11
+    [1] => 3
+)
+
+POST item_Qty: Array
+(
+    [0] => 2
+    [1] => 2
+)
+
+Starting sale_add.php
+Product name: Lux Soap
+Product name: Blue Suit Case Made in Garmany Medium
+POST item_Name: Array
+(
+    [0] => Lux Soap
+)
+
+POST item_id: Array
+(
+    [0] => 11
+)
+
+POST item_Qty: Array
+(
+    [0] => 60
+)
+
+Starting sale_add.php
+Product name: Lux Soap
+POST item_Name: Array
+(
+    [0] => Lux Soap
+    [1] => Blue Suit Case Made in Garmany Medium
+    [2] => 4 wheels pegion 20 inch
+    [3] => 4 wheels pegion 24 inch
+    [4] => 4 wheels pegion 28 inch
+    [5] => Blue Ladies Bag
+)
+
+POST item_id: Array
+(
+    [0] => 11
+    [1] => 3
+    [2] => 12
+    [3] => 13
+    [4] => 14
+    [5] => 5
+)
+
+POST item_Qty: Array
+(
+    [0] => 50
+    [1] => 40
+    [2] => 2
+    [3] => 2
+    [4] => 2
+    [5] => 2
+)
+
+Starting sale_add.php
+Product name: Lux Soap
+Product name: Blue Suit Case Made in Garmany Medium
+Product name: 4 wheels pegion 20 inch
+Product name: 4 wheels pegion 24 inch
+Product name: 4 wheels pegion 28 inch
+Product name: Blue Ladies Bag
+POST item_Name: Array
+(
+    [0] => Lux Soap
+)
+
+POST item_id: Array
+(
+    [0] => 11
+)
+
+POST item_Qty: Array
+(
+    [0] => 2
+)
+
+Starting sale_add.php
+Product name: Lux Soap
+POST item_Name: Array
+(
+    [0] => Lux Soap
+)
+
+POST item_id: Array
+(
+    [0] => 11
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+)
+
+Starting sale_add.php
+Product name: Lux Soap
+POST item_Name: Array
+(
+    [0] => Blue Ladies Bag
+)
+
+POST item_id: Array
+(
+    [0] => 5
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+)
+
+Starting sale_add.php
+Product name: Blue Ladies Bag
+POST item_Name: Array
+(
+    [0] => Blue Ladies Bag
+    [1] => Lux Soap
+)
+
+POST item_id: Array
+(
+    [0] => 5
+    [1] => 11
+)
+
+POST item_Qty: Array
+(
+    [0] => 2
+    [1] => 2
+)
+
+Starting sale_add.php
+Product name: Blue Ladies Bag
+Product name: Lux Soap
+POST item_Name: Array
+(
+    [0] => Lux Soap
+)
+
+POST item_id: Array
+(
+    [0] => 11
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+)
+
+Starting sale_add.php
+Product name: Lux Soap
+POST item_Name: Array
+(
+    [0] => fdsf
+)
+
+POST item_id: Array
+(
+    [0] => 10
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+)
+
+Starting sale_add.php
+Product name: fdsf
+POST item_Name: Array
+(
+    [0] => Tesing New product
+)
+
+POST item_id: Array
+(
+    [0] => 16
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+)
+
+Starting sale_add.php
+Product name: Tesing New product
+POST item_Name: Array
+(
+    [0] => Lux Soap
+    [1] => Blue Suit Case Made in Garmany Medium
+    [2] => Lawn 943893
+    [3] => Tesing New product
+)
+
+POST item_id: Array
+(
+    [0] => 11
+    [1] => 3
+    [2] => 15
+    [3] => 16
+)
+
+POST item_Qty: Array
+(
+    [0] => 3
+    [1] => 2
+    [2] => 1
+    [3] => 1
+)
+
+Starting sale_add.php
+Product name: Lux Soap
+Product name: Blue Suit Case Made in Garmany Medium
+Product name: Lawn 943893
+Product name: Tesing New product
+POST item_Name: Array
+(
+    [0] => Lux Soap
+)
+
+POST item_id: Array
+(
+    [0] => 11
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+)
+
+Starting sale_add.php
+Product name: Lux Soap
+POST item_Name: Array
+(
+    [0] => Lux Soap
+)
+
+POST item_id: Array
+(
+    [0] => 11
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+)
+
+Starting sale_add.php
+Product name: Lux Soap
+POST item_Name: Array
+(
+    [0] => Lux Soap
+)
+
+POST item_id: Array
+(
+    [0] => 11
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+)
+
+Starting sale_add.php
+Product name: Lux Soap
+POST item_Name: Array
+(
+    [0] => Lux Soap
+)
+
+POST item_id: Array
+(
+    [0] => 11
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+)
+
+Starting sale_add.php
+Product name: Lux Soap
+POST item_Name: Array
+(
+    [0] => Lux Soap
+)
+
+POST item_id: Array
+(
+    [0] => 11
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+)
+
+Starting sale_add.php
+Product name: Lux Soap
+POST item_Name: Array
+(
+    [0] => Lux Soap
+)
+
+POST item_id: Array
+(
+    [0] => 11
+)
+
+POST item_Qty: Array
+(
+    [0] => 33
+)
+
+Starting sale_add.php
+Product name: Lux Soap
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: Array
+(
+    [0] => winter cotton
+)
+
+POST item_id: Array
+(
+    [0] => 17
+)
+
+POST item_Qty: Array
+(
+    [0] => 1000
+)
+
+Starting sale_add.php
+Product name: winter cotton
+POST item_Name: Array
+(
+    [0] => winter cotton
+)
+
+POST item_id: Array
+(
+    [0] => 17
+)
+
+POST item_Qty: Array
+(
+    [0] => 1500
+)
+
+Starting sale_add.php
+Product name: winter cotton
+POST item_Name: Array
+(
+    [0] => winter cotton
+)
+
+POST item_id: Array
+(
+    [0] => 17
+)
+
+POST item_Qty: Array
+(
+    [0] => 2000
+)
+
+Starting sale_add.php
+Product name: winter cotton
+POST item_Name: Array
+(
+    [0] => winter cotton
+)
+
+POST item_id: Array
+(
+    [0] => 17
+)
+
+POST item_Qty: Array
+(
+    [0] => 5000
+)
+
+Starting sale_add.php
+Product name: winter cotton
+POST item_Name: Array
+(
+    [0] => winter cotton
+)
+
+POST item_id: Array
+(
+    [0] => 17
+)
+
+POST item_Qty: Array
+(
+    [0] => 5000
+)
+
+Starting sale_add.php
+Product name: winter cotton
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: Array
+(
+    [0] => winter cotton
+)
+
+POST item_id: Array
+(
+    [0] => 17
+)
+
+POST item_Qty: Array
+(
+    [0] => 250
+)
+
+Starting sale_add.php
+Product name: winter cotton
+POST item_Name: Array
+(
+    [0] => winter cotton
+)
+
+POST item_id: Array
+(
+    [0] => 17
+)
+
+POST item_Qty: Array
+(
+    [0] => 250
+)
+
+Starting sale_add.php
+Product name: winter cotton
+POST item_Name: Array
+(
+    [0] => winter cotton
+)
+
+POST item_id: Array
+(
+    [0] => 17
+)
+
+POST item_Qty: Array
+(
+    [0] => 500
+)
+
+Starting sale_add.php
+Product name: winter cotton
+POST item_Name: Array
+(
+    [0] => winter cotton
+)
+
+POST item_id: Array
+(
+    [0] => 17
+)
+
+POST item_Qty: Array
+(
+    [0] => 1000
+)
+
+Starting sale_add.php
+Product name: winter cotton
+POST item_Name: Array
+(
+    [0] => winter cotton
+)
+
+POST item_id: Array
+(
+    [0] => 17
+)
+
+POST item_Qty: Array
+(
+    [0] => 2000
+)
+
+Starting sale_add.php
+Product name: winter cotton
+POST item_Name: Array
+(
+    [0] => winter cotton
+)
+
+POST item_id: Array
+(
+    [0] => 17
+)
+
+POST item_Qty: Array
+(
+    [0] => 500
+)
+
+Starting sale_add.php
+Product name: winter cotton
+POST item_Name: Array
+(
+    [0] => winter cotton
+)
+
+POST item_id: Array
+(
+    [0] => 17
+)
+
+POST item_Qty: Array
+(
+    [0] => 2901
+)
+
+Starting sale_add.php
+Product name: winter cotton
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: Array
+(
+    [0] => winter cotton
+)
+
+POST item_id: Array
+(
+    [0] => 17
+)
+
+POST item_Qty: Array
+(
+    [0] => 100
+)
+
+Starting sale_add.php
+Product name: winter cotton
+POST item_Name: Array
+(
+    [0] => winter cotton
+)
+
+POST item_id: Array
+(
+    [0] => 17
+)
+
+POST item_Qty: Array
+(
+    [0] => 1000
+)
+
+Starting sale_add.php
+Product name: winter cotton
+POST item_Name: Array
+(
+    [0] => winter cotton
+    [1] => winter cotton 1
+)
+
+POST item_id: Array
+(
+    [0] => 17
+    [1] => 18
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+    [1] => 1
+)
+
+Starting sale_add.php
+Product name: winter cotton
+Product name: winter cotton 1
+POST item_Name: Array
+(
+    [0] => A 40
+)
+
+POST item_id: Array
+(
+    [0] => 1
+)
+
+POST item_Qty: Array
+(
+    [0] => 25
+)
+
+Starting sale_add.php
+Product name: A 40
+POST item_Name: Array
+(
+    [0] => A42
+    [1] => A 43
+    [2] => A 45
+)
+
+POST item_id: Array
+(
+    [0] => 3
+    [1] => 4
+    [2] => 5
+)
+
+POST item_Qty: Array
+(
+    [0] => 20
+    [1] => 50
+    [2] => 10
+)
+
+Starting sale_add.php
+Product name: A42
+Product name: A 43
+Product name: A 45
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: Array
+(
+    [0] => A 35
+)
+
+POST item_id: Array
+(
+    [0] => 6
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+)
+
+Starting sale_add.php
+Product name: A 35
+POST item_Name: Array
+(
+    [0] => A 35
+    [1] => A 45
+)
+
+POST item_id: Array
+(
+    [0] => 6
+    [1] => 5
+)
+
+POST item_Qty: Array
+(
+    [0] => 35
+    [1] => 20
+)
+
+Starting sale_add.php
+Product name: A 35
+Product name: A 45
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: Array
+(
+    [0] => A42
+    [1] => A 43
+    [2] => A 45
+)
+
+POST item_id: Array
+(
+    [0] => 3
+    [1] => 4
+    [2] => 5
+)
+
+POST item_Qty: Array
+(
+    [0] => 20
+    [1] => 50
+    [2] => 10
+)
+
+Starting sale_add.php
+Product name: A42
+Product name: A 43
+Product name: A 45
+POST item_Name: Array
+(
+    [0] => A42
+    [1] => A 43
+    [2] => A 45
+)
+
+POST item_id: Array
+(
+    [0] => 3
+    [1] => 4
+    [2] => 5
+)
+
+POST item_Qty: Array
+(
+    [0] => 20
+    [1] => 50
+    [2] => 10
+)
+
+Starting sale_add.php
+Product name: A42
+Product name: A 43
+Product name: A 45
+POST item_Name: Array
+(
+    [0] => A42
+    [1] => A 43
+    [2] => A 45
+)
+
+POST item_id: Array
+(
+    [0] => 3
+    [1] => 4
+    [2] => 5
+)
+
+POST item_Qty: Array
+(
+    [0] => 20
+    [1] => 50
+    [2] => 10
+)
+
+Starting sale_add.php
+Product name: A42
+Product name: A 43
+Product name: A 45
+POST item_Name: Array
+(
+    [0] => A42
+)
+
+POST item_id: Array
+(
+    [0] => 3
+)
+
+POST item_Qty: Array
+(
+    [0] => 33
+)
+
+Starting sale_add.php
+Product name: A42
+POST item_Name: Array
+(
+    [0] => A42
+    [1] => A 43
+    [2] => A 45
+)
+
+POST item_id: Array
+(
+    [0] => 3
+    [1] => 4
+    [2] => 5
+)
+
+POST item_Qty: Array
+(
+    [0] => 20
+    [1] => 50
+    [2] => 10
+)
+
+Starting sale_add.php
+Product name: A42
+Product name: A 43
+Product name: A 45
+POST item_Name: Array
+(
+    [0] => A 35
+    [1] => A 45
+)
+
+POST item_id: Array
+(
+    [0] => 6
+    [1] => 5
+)
+
+POST item_Qty: Array
+(
+    [0] => 35
+    [1] => 20
+)
+
+Starting sale_add.php
+Product name: A 35
+Product name: A 45
+POST item_Name: Array
+(
+    [0] => A 40
+)
+
+POST item_id: Array
+(
+    [0] => 2
+)
+
+POST item_Qty: Array
+(
+    [0] => 15
+)
+
+Starting sale_add.php
+Product name: A 40
+POST item_Name: Array
+(
+    [0] => A42
+)
+
+POST item_id: Array
+(
+    [0] => 3
+)
+
+POST item_Qty: Array
+(
+    [0] => 2
+)
+
+Starting sale_add.php
+Product name: A42
+POST item_Name: Array
+(
+    [0] => A 45
+)
+
+POST item_id: Array
+(
+    [0] => 5
+)
+
+POST item_Qty: Array
+(
+    [0] => 15
+)
+
+Starting sale_add.php
+Product name: A 45
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: Array
+(
+    [0] => A 45
+)
+
+POST item_id: Array
+(
+    [0] => 5
+)
+
+POST item_Qty: Array
+(
+    [0] => 12
+)
+
+Starting sale_add.php
+Product name: A 45
+POST item_Name: Array
+(
+    [0] => A 40
+)
+
+POST item_id: Array
+(
+    [0] => 2
+)
+
+POST item_Qty: Array
+(
+    [0] => 121
+)
+
+Starting sale_add.php
+Product name: A 40
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: Array
+(
+    [0] => A 45
+)
+
+POST item_id: Array
+(
+    [0] => 5
+)
+
+POST item_Qty: Array
+(
+    [0] => 2
+)
+
+Starting sale_add.php
+Product name: A 45
+POST item_Name: Array
+(
+    [0] => A42
+)
+
+POST item_id: Array
+(
+    [0] => 3
+)
+
+POST item_Qty: Array
+(
+    [0] => 6
+)
+
+Starting sale_add.php
+Product name: A42
+POST item_Name: Array
+(
+    [0] => A 35
+)
+
+POST item_id: Array
+(
+    [0] => 6
+)
+
+POST item_Qty: Array
+(
+    [0] => 50
+)
+
+Starting sale_add.php
+Product name: A 35
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: 
+POST item_id: 
+POST item_Qty: 
+POST item_Name: Array
+(
+    [0] => A42
+    [1] => A 43
+    [2] => A 45
+)
+
+POST item_id: Array
+(
+    [0] => 3
+    [1] => 4
+    [2] => 5
+)
+
+POST item_Qty: Array
+(
+    [0] => 50
+    [1] => 50
+    [2] => 50
+)
+
+Starting sale_add.php
+Product name: A42
+Product name: A 43
+Product name: A 45
+POST item_Name: Array
+(
+    [0] => A 40
+    [1] => A 45
+    [2] => T 42
+    [3] => T 35
+)
+
+POST item_id: Array
+(
+    [0] => 2
+    [1] => 5
+    [2] => 8
+    [3] => 12
+)
+
+POST item_Qty: Array
+(
+    [0] => 100
+    [1] => 100
+    [2] => 100
+    [3] => 100
+)
+
+Starting sale_add.php
+Product name: A 40
+Product name: A 45
+Product name: T 42
+Product name: T 35
+POST item_Name: Array
+(
+    [0] => A42
+)
+
+POST item_id: Array
+(
+    [0] => 3
+)
+
+POST item_Qty: Array
+(
+    [0] => 1
+)
+
+Starting sale_add.php
+Product name: A42
+POST item_Name: Array
+(
+    [0] => A42
+)
+
+POST item_id: Array
+(
+    [0] => 3
+)
+
+POST item_Qty: Array
+(
+    [0] => 36
+)
+
+Starting sale_add.php
+Product name: A42
+POST item_Name: Array
+(
+    [0] => A42
+)
+
+POST item_id: Array
+(
+    [0] => 3
+)
+
+POST item_Qty: Array
+(
+    [0] => 114
+)
+
+Starting sale_add.php
+Product name: A42
+POST item_Name: Array
+(
+    [0] => A42
+)
+
+POST item_id: Array
+(
+    [0] => 3
+)
+
+POST item_Qty: Array
+(
+    [0] => 348
+)
+
+Starting sale_add.php
+Product name: A42
+POST item_Name: Array
+(
+    [0] => A42
+    [1] => A42  1
+    [2] => A 42 2
+    [3] => A42 3
+    [4] => A42 4
+    [5] => A 42 5
+    [6] => A 42 6
+    [7] => T 40
+)
+
+POST item_id: Array
+(
+    [0] => 3
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 7
+)
+
+POST item_Qty: Array
+(
+    [0] => 36
+    [1] => 36
+    [2] => 24
+    [3] => 36
+    [4] => 36
+    [5] => 36
+    [6] => 36
+    [7] => 144
+)
+
+Starting sale_add.php
+Product name: A42
+Product name: A42  1
+Product name: A 42 2
+Product name: A42 3
+Product name: A42 4
+Product name: A 42 5
+Product name: A 42 6
+Product name: T 40
+POST item_Name: Array
+(
+    [0] => A42
+    [1] => A42  1
+    [2] => A 42 2
+    [3] => A42 3
+    [4] => A42 4
+    [5] => A 42 5
+    [6] => A 42 6
+    [7] => A 40
+)
+
+POST item_id: Array
+(
+    [0] => 3
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 2
+)
+
+POST item_Qty: Array
+(
+    [0] => 36
+    [1] => 36
+    [2] => 24
+    [3] => 36
+    [4] => 144
+    [5] => 36
+    [6] => 36
+    [7] => 36
+)
+
+Starting sale_add.php
+Product name: A42
+Product name: A42  1
+Product name: A 42 2
+Product name: A42 3
+Product name: A42 4
+Product name: A 42 5
+Product name: A 42 6
+Product name: A 40
+POST item_Name: Array
+(
+    [0] => A42
+    [1] => A42  1
+    [2] => A 42 2
+    [3] => A42 3
+    [4] => A42 4
+    [5] => A 42 5
+    [6] => A 42 6
+    [7] => A 40
+)
+
+POST item_id: Array
+(
+    [0] => 3
+    [1] => 14
+    [2] => 15
+    [3] => 16
+    [4] => 17
+    [5] => 18
+    [6] => 19
+    [7] => 2
+)
+
+POST item_Qty: Array
+(
+    [0] => 36
+    [1] => 36
+    [2] => 24
+    [3] => 36
+    [4] => 144
+    [5] => 36
+    [6] => 36
+    [7] => 36
+)
+
+Starting sale_add.php
+Product name: A42
+Product name: A42  1
+Product name: A 42 2
+Product name: A42 3
+Product name: A42 4
+Product name: A 42 5
+Product name: A 42 6
+Product name: A 40
