@@ -1,0 +1,156 @@
+.jarviswidget>header h2 {
+    height: 100%;
+    width: auto;
+    display: inline-block;
+    font-size: 18px;
+    position: relative;
+    margin: 0;
+    line-height: 41px;
+    font-weight: bold;
+    letter-spacing: 0;
+}
+.small_icon {
+    display: block;
+    float: left;
+    margin: 10px 10px 17px 10px;
+    line-height: 12px;
+    font-size: 20px;
+}
+
+.small_icon-inner {
+    display: block;
+    float: left;
+    margin-left: 3px;
+    line-height: 19px;
+    font-size: 20px;
+    margin-right: 15px;
+}
+
+.jarviswidget>header {
+    height: 44px;
+    padding: 0;
+    line-height: 40px;
+}
+
+.widget-toolbar {
+    display: inline-block;
+    float: right;
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    border-left: 1px solid rgba(0,0,0,.09);
+    cursor: pointer;
+    padding: 0 8px;
+    text-align: center;
+}
+.page-footer {
+    height: 52px;
+    padding: 15px 13px 0;
+    padding-left: 233px;
+    border-top: 1px solid #CECECE;
+    background: #3a3633;
+    width: 100%;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    /* text-align: right; */
+}
+.txt-color-white {
+    color: #fff !important;
+    font-weight: bold;
+    font-size: 14px;
+}
+.jarviswidget-color-white>header {
+    border-color: #ccc!important;
+    background: #009DFF;
+    color: #fff;
+}
+.jarviswidget>header {
+     border-color: #ccc!important;
+    background: #009DFF;
+    color: #fff;
+}
+.jarviswidget-color-white .nav-tabs li a:hover, .jarviswidget-color-white .nav-tabs li:not(.active) a, .jarviswidget-color-white>header>.jarviswidget-ctrls a {
+    color: #eee!important;
+}
+.dashboard_tiles {
+    margin: 0 auto;
+    width: 64%;
+}
+.widget-body.no-padding {
+    margin: -7px 4px 0;
+    /* padding: 40px; */
+}
+.widget-body.no-padding {
+    margin: -7px 4px 0;
+    /* padding: 40px; */
+    margin-bottom: 21px;
+}
+.smart-form footer {
+    display: block;
+    padding: 7px 14px 15px;
+    border-top: 1px solid rgba(0,0,0,.1);
+    background: rgba(248,248,248,.9);
+    margin-bottom: 25px;
+}
+#ribbon {
+    min-height: 40px;
+    background: #474544;
+    padding: 0 13px;
+    position: relative;
+    display: none;
+}
+.jarviswidget>div {
+    background-color: #fff!important;
+    border: 1px solid silver;
+}
+.alert-success {
+    border-color: #f1f1f1;
+    color: #fafafa;
+    background-color: #00AAFF;
+}
+.input_field_popup{
+	padding-left: 10px;
+    padding-top: 0px;
+}
+.one-edge-shadow {
+  -webkit-box-shadow: 6px 6px 8px -9px #777 !important;
+       -moz-box-shadow: 6px 6px 8px -9px #777 !important; 
+            box-shadow: 6px 6px 8px -9px #777 !important;
+}
+.menu-on-top aside#left-panel nav>ul>li:hover>ul {
+    display: block!important;
+    width: 230px;
+}
+.menu-on-top nav ul ul, .menu-on-top nav ul ul ul {
+    
+    border-bottom: 4px solid #BD2A2A;
+    
+}
+.jarviswidget-ctrls a {
+    
+    color: #fbf8f8;
+}
+.widget-toolbar{
+	display:none;
+}
+.jarviswidget-ctrls .button-icon {
+    min-width: 30px;
+    height: 40px;
+    float: left;
+    position: relative;
+    font-family: Arial,Helvetica,sans-serif;
+    border-left: 1px solid rgba(0,0,0,.09);
+    line-height: 40px;
+}
+.smart-form footer .btn {
+    float: right;
+    height: 31px;
+    margin: 10px 0 0 5px;
+    padding: 0 22px;
+    font: 300 15px/29px 'Open Sans',Helvetica,Arial,sans-serif;
+    cursor: pointer;
+    background-color: #009dff;
+    font-weight: bold;
+}
