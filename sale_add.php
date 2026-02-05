@@ -14,8 +14,26 @@ require_once ("inc/config.ui.php");
 $page_title = "Billing";
 include ("inc/header.php");
 include('lib/lib_quotation1.php');
+// Debug logging helper
 function debug_log($msg) {
     file_put_contents(__DIR__.'/debug_sale_add.log', $msg.PHP_EOL, FILE_APPEND);
+}
+
+// ===== ZATCA (TLV QR) helpers for SALE SAVE TIME =====
+function zatca_tlv($tag, $value) {
+    $value = (string)$value;
+    $len = strlen($value);
+    return chr($tag) . chr($len) . $value;
+}
+
+function zatca_qr_base64($sellerName, $vatNo, $timestampIso, $totalWithVat, $vatAmount) {
+    $tlv =
+        zatca_tlv(1, $sellerName) .
+        zatca_tlv(2, $vatNo) .
+        zatca_tlv(3, $timestampIso) .
+        zatca_tlv(4, $totalWithVat) .
+        zatca_tlv(5, $vatAmount);
+    return base64_encode($tlv);
 }
 
 // Helper to safely pick an existing stock column in adm_item, or fall back to 0
@@ -51,7 +69,7 @@ if (!function_exists('detect_item_stock_expr')) {
         return $expr;
     }
 }
-
+//
 if(isset($_GET['id']))
 {
 	$id=(int)mysqli_real_escape_string($con,$_GET['id']);
@@ -61,6 +79,24 @@ if(isset($_GET['id']))
 	$Rows=mysqli_num_rows($Qry);
 	if($Rows!=1) { ?> <script> window.location.href='<?=$base_file?>';</script><?php die();}
 	$Result=mysqli_fetch_object($Qry);
+
+
+        // ✅ BEST PLACE: Block edit if invoice is already REPORTED
+    $z = mysqli_fetch_assoc(mysqli_query($con, "
+        SELECT status
+        FROM zatca_invoice
+        WHERE invoice_id = $id
+        LIMIT 1
+    "));
+    $st = strtoupper(trim($z['status'] ?? ''));
+    if ($st === 'REPORTED') {
+        $_SESSION['msg'] = '<div class="alert alert-danger">This invoice is REPORTED to ZATCA, so it cannot be edited. Please use Credit Note (Sale Return).</div>';
+        echo '<script>
+            alert("This invoice is REPORTED to ZATCA, so it cannot be edited. Please use Credit Note (Sale Return).");
+            window.location.href="sale_list.php";
+        </script>';
+        exit;
+    }
 
 
 	$s_Number = $Result->s_Number;
@@ -342,9 +378,9 @@ if (isset($_POST['post_form'])) {
     $s_TotalAmount     = (float)($_POST['s_TotalAmount'] ?? 0);
     $s_TaxAmount       = isset($_POST['s_TaxAmount']) ? (float)$_POST['s_TaxAmount'] : 0.0;
     $s_Tax             = isset($_POST['s_Tax']) ? (float)$_POST['s_Tax'] : 0.0;
-    $s_DiscountAmount  = isset($_POST['s_DiscountAmount']) ? (float)$_POST['s_DiscountAmount'] : 0.0; // Amount (Rs)
-    $s_Discount        = isset($_POST['s_Discount']) ? (float)$_POST['s_Discount'] : 0.0;            // Percentage (if any)
-    $s_DiscountPrice   = 0.0; // not used
+    $s_DiscountAmount  = isset($_POST['s_DiscountAmount']) ? (float)$_POST['s_DiscountAmount'] : 0.0;
+    $s_Discount        = isset($_POST['s_Discount']) ? (float)$_POST['s_Discount'] : 0.0;
+    $s_DiscountPrice   = 0.0;
     $s_NetAmount       = (float)($_POST['s_NetAmount'] ?? 0);
 
     // --- New: Accept user provided date (allow back-date, block future unless you remove the check) ---
@@ -352,7 +388,7 @@ if (isset($_POST['post_form'])) {
     $today = date('Y-m-d');
     if ($raw_date !== '' && preg_match('/^\d{4}-\d{2}-\d{2}$/', $raw_date)) {
         if ($raw_date > $today) {
-            $s_Date = $today; // block future date
+            $s_Date = $today;
         } else {
             $s_Date = $raw_date;
         }
@@ -385,19 +421,18 @@ if (isset($_POST['post_form'])) {
         exit;
     }
 
-    // If editing, preload & preserve invoice no/series/branch/date (original date if user left date blank)
+    // If editing, preload & preserve invoice no/series/branch/date
     if ($is_edit) {
         $oldSale = mysqli_fetch_assoc(mysqli_query($con, "SELECT s_Number, s_NumberSr, branch_id, s_Date AS old_date FROM cust_sale WHERE s_id=$id LIMIT 1"));
         if ($oldSale) {
             $s_Number   = $oldSale['s_Number'];
             $s_NumberSr = (int)$oldSale['s_NumberSr'];
             $branch_id  = (int)$oldSale['branch_id'];
-            // If user date field left blank or invalid (handled above), keep old date
             if (trim($_POST['s_Date'] ?? '') === '') {
                 $s_Date = $oldSale['old_date'];
             }
         } else {
-            $is_edit = false; // treat as new if not found
+            $is_edit = false;
         }
     }
 
@@ -406,7 +441,6 @@ if (isset($_POST['post_form'])) {
     // --- Step 2: Insert/Update master sale row ---
 
     if (!$is_edit) {
-        // New invoice series per branch
         $NumberCheckQ = "SELECT MAX(s_NumberSr) as s_Number FROM cust_sale WHERE branch_id='$branch_id'";
         $NumberCheckRes = mysqli_query($con, $NumberCheckQ);
         $r = mysqli_fetch_assoc($NumberCheckRes);
@@ -429,7 +463,6 @@ if (isset($_POST['post_form'])) {
             $id = (int)mysqli_insert_id($con);
         }
     } else {
-        // Edit existing invoice (date editable)
         $uQ = "UPDATE cust_sale SET
                 s_Date = '$s_Date',
                 client_id = '$client_account_id',
@@ -496,7 +529,6 @@ if (isset($_POST['post_form'])) {
 
             if ($product_name === '' || $itm_id <= 0 || $qty <= 0) continue;
 
-            // SET item
             if (strpos($product_name, '[SET]') === 0) {
                 $set_name = trim(str_replace('[SET]', '', $product_name));
                 $set_row = mysqli_fetch_assoc(mysqli_query($con, "SELECT set_id FROM adm_itemset WHERE TRIM(set_name)='" . mysqli_real_escape_string($con, $set_name) . "' LIMIT 1"));
@@ -508,9 +540,7 @@ if (isset($_POST['post_form'])) {
                                                        WHERE s.set_id = $set_id");
                     while ($si = mysqli_fetch_assoc($set_items_q)) {
                         $rate_set_item = (float)($si['item_SalePrice'] ?? 0);
-                        $desc = "{$si['item_Name']} - {$si['quantity']} pcs @ {$rate_set_item}";
-                        $sale_items_desc_arr[] = $desc;
-
+                        $sale_items_desc_arr[] = "{$si['item_Name']} - {$si['quantity']} pcs @ {$rate_set_item}";
                         $line_net = $si['quantity'] * $rate_set_item;
 
                         $sdQ = "INSERT INTO cust_sale_detail
@@ -558,7 +588,6 @@ if (isset($_POST['post_form'])) {
     // --- Step 5: Create accounting vouchers ---
 
     if ($error === 0) {
-        // Sale voucher
         $voucher_type = 'Sale';
         $voucher_no   = $s_Number ?? '';
         $voucher_desc = 'Sale Invoice #' . $voucher_no . ' (' . $client_name . ')';
@@ -576,7 +605,6 @@ if (isset($_POST['post_form'])) {
                                      VALUES ($sale_voucher_id, $sales_account_id, '$sale_items_desc', 0, $s_NetAmount)")) { $error++; }
         }
 
-        // Payment voucher (only if cash received)
         if ($sp_Amount > 0 && $error === 0) {
             $sp_Description = "Received against Invoice# $s_Number";
             $spQ = "INSERT INTO adm_sale_payment(sp_Date, client_id, sp_Amount, s_id, s_id2, sp_Description, sp_Type, sp_CreatedOn, u_id, branch_id)
@@ -599,6 +627,73 @@ if (isset($_POST['post_form'])) {
                                              VALUES ($pay_voucher_id, $client_account_id, '" . mysqli_real_escape_string($con, $voucher_desc) . "', 0, $sp_Amount)")) { $error++; }
                 }
             }
+        }
+    }
+
+    // ===== ZATCA: generate + store BEFORE commit (SALE SAVE TIME) =====
+    if ($error === 0) {
+
+        $brRes = mysqli_query($con, "SELECT branch_Name, zatca_seller_vat, zatca_seller_legal_name FROM adm_branch WHERE branch_id=$branch_id LIMIT 1");
+        $br = $brRes ? mysqli_fetch_assoc($brRes) : null;
+
+        $seller_name = trim((string)($br['zatca_seller_legal_name'] ?? ''));
+        if ($seller_name === '') $seller_name = (string)($br['branch_Name'] ?? '');
+
+        $vat_no = trim((string)($br['zatca_seller_vat'] ?? ''));
+
+        $dt = new DateTime($current_datetime_sql ?? date('Y-m-d H:i:s'));
+        $dt->setTimezone(new DateTimeZone('Asia/Riyadh'));
+        $timestamp_iso = $dt->format('Y-m-d\TH:i:sP');
+
+        $total_with_vat = number_format((float)$s_NetAmount, 2, '.', '');
+
+        $vat_amount_val = (float)$s_TaxAmount;
+        if ($vat_amount_val <= 0 && (float)$s_Tax > 0) {
+            $vat_amount_val = ((float)$s_NetAmount * (float)$s_Tax) / 100.0;
+        }
+        $vat_amount = number_format($vat_amount_val, 2, '.', '');
+
+        try {
+            $uuid = bin2hex(random_bytes(16));
+        } catch (Exception $e) {
+            $uuid = md5(uniqid((string)$id, true));
+        }
+
+        $hash_input = ($s_Number ?? '') . '|' . $timestamp_iso . '|' . $total_with_vat . '|' . $vat_amount . '|' . $vat_no;
+        $invoice_hash = hash('sha256', $hash_input);
+
+        $qr_base64 = null;
+        if ($seller_name !== '' && $vat_no !== '' && (float)$total_with_vat > 0) {
+            $qr_base64 = zatca_qr_base64($seller_name, $vat_no, $timestamp_iso, $total_with_vat, $vat_amount);
+        }
+
+        $invNoEsc = mysqli_real_escape_string($con, (string)($s_Number ?? ''));
+        $uuidEsc  = mysqli_real_escape_string($con, $uuid);
+        $hashEsc  = mysqli_real_escape_string($con, $invoice_hash);
+        $qrEsc    = $qr_base64 !== null ? ("'".mysqli_real_escape_string($con, $qr_base64)."'") : "NULL";
+
+        if ($invNoEsc !== '') {
+            $existsRes = mysqli_query($con, "SELECT id FROM zatca_invoice WHERE branch_id=$branch_id AND invoice_no='$invNoEsc' LIMIT 1");
+            if ($existsRes && mysqli_num_rows($existsRes) > 0) {
+                $row = mysqli_fetch_assoc($existsRes);
+                $zid = (int)$row['id'];
+                $zq = "
+                    UPDATE zatca_invoice
+                    SET invoice_id=$id, uuid='$uuidEsc', invoice_hash='$hashEsc', qr_base64=$qrEsc,
+                        status='PENDING', updated_at=NOW()
+                    WHERE id=$zid
+                ";
+                if (!mysqli_query($con, $zq)) { $error++; debug_log('ZATCA update error: ' . mysqli_error($con)); }
+            } else {
+                $zq = "
+                    INSERT INTO zatca_invoice (branch_id, invoice_no, invoice_id, uuid, invoice_hash, qr_base64, status, created_at)
+                    VALUES ($branch_id, '$invNoEsc', $id, '$uuidEsc', '$hashEsc', $qrEsc, 'PENDING', NOW())
+                ";
+                if (!mysqli_query($con, $zq)) { $error++; debug_log('ZATCA insert error: ' . mysqli_error($con)); }
+            }
+        } else {
+            $error++;
+            debug_log('ZATCA skipped: invoice_no empty');
         }
     }
 
